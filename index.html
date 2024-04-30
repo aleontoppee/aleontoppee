@@ -3,30 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Legit Shop</title>
+<title>Sito con Pagine Scorribili</title>
 <style>
   body {
-    background-image: url('newlegitshop.png'); /* Sostituisci 'percorso_del_tuo_sfondo.jpg' con il percorso del tuo sfondo */
-    background-size: cover;
-    background-position: center;
-    font-family: 'Arial', sans-serif; /* Sostituisci 'Nome del tuo font personalizzato' con il nome del tuo font */
-    color: #000; /* Cambiato il colore del testo in nero */
+    font-family: Arial, sans-serif;
   }
-  .contenitore {
+  .pagina {
+    padding: 50px 20px;
     text-align: center;
-    padding-top: 100px;
   }
-  .titolo {
-    font-size: 36px;
-    font-weight: bold;
+  .pagina h2 {
+    font-size: 24px;
+  }
+  .pagina p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .navigazione {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 </style>
 </head>
 <body>
 
-<div class="contenitore">
-  <h1 class="titolo">Benvenuto nel sito di Legit Shop</h1>
-  <p>Questo è il sito di Legit Shop fondato da aleontoppee.</p>
+<div id="pagina1" class="pagina">
+  <h2>Pagina 1</h2>
+  <p>Questo è il contenuto della pagina 1.</p>
+</div>
+
+<div id="pagina2" class="pagina">
+  <h2>Pagina 2</h2>
+  <p>Questo è il contenuto della pagina 2.</p>
+</div>
+
+<div id="pagina3" class="pagina">
+  <h2>Pagina 3</h2>
+  <p>Questo è il contenuto della pagina 3.</p>
+</div>
+
+<div class="navigazione">
+  <a href="#pagina1">Pagina 1</a> |
+  <a href="#pagina2">Pagina 2</a> |
+  <a href="#pagina3">Pagina 3</a>
 </div>
 
 </body>
