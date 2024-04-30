@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sito con Pagine Separate</title>
+<title>Sito con Pagine Separate, Mappa e Coordinate</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -51,6 +51,13 @@
   </div>
 </div>
 
+<map name="mappa">
+  <!-- Aggiungiamo un'area rettangolare intorno alle coordinate fornite -->
+  <area shape="rect" coords="1088,256,1138,306" href="#posizione_cliccata">
+</map>
+
+<img src="mappa_immagine.jpg" alt="Mappa" usemap="#mappa" style="display: none;">
+
 <div class="navigazione">
   <a href="#pagina1">Pagina 1</a> |
   <a href="#pagina2">Pagina 2</a> |
@@ -59,6 +66,7 @@
 
 </body>
 </html>
+
 
 
 
