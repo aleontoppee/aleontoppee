@@ -26,6 +26,15 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .mappa-container {
+    text-align: right;
+  }
+  .mappa-container img {
+    width: 30px; /* Riduci le dimensioni dell'icona della mappa */
+    vertical-align: middle; /* Allinea verticalmente l'icona della mappa con il testo */
+    margin-left: 5px; /* Aggiungi un margine a sinistra per separare l'icona dal testo */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra l'icona della mappa */
+  }
 </style>
 </head>
 <body>
@@ -46,8 +55,11 @@
 
 <div id="pagina3" class="pagina">
   <div class="testo">
-    <h2>Pagina 3</h2>
-    <p>Questo è il contenuto della pagina 3.</p>
+    <h2>Mappa di Candy Party Eventi</h2>
+    <p>Benvenuti nella mappa di Candy Party Eventi.</p>
+    <div class="mappa-container">
+      <img src="iconamappa.png" alt="Mappa" onclick="redirectToGPS()">
+    </div>
   </div>
 </div>
 
@@ -56,16 +68,29 @@
   <area shape="rect" coords="1088,256,1138,306" href="#posizione_cliccata">
 </map>
 
-<img src="iconamappa.png" alt="Mappa" usemap="#mappa">
-
 <div class="navigazione">
   <a href="#pagina1">Pagina 1</a> |
   <a href="#pagina2">Pagina 2</a> |
   <a href="#pagina3">Pagina 3</a>
 </div>
 
+<script>
+  function redirectToGPS() {
+    // Coordinate di Candy Party Eventi
+    var lat = 40.931944;
+    var lng = 14.468055;
+    
+    // Costruisci l'URL di Google Maps
+    var googleMapsUrl = "https://www.google.com/maps?q=" + lat + "," + lng;
+    
+    // Effettua il redirect a Google Maps
+    window.location.href = googleMapsUrl;
+  }
+</script>
+
 </body>
 </html>
+
 
 
 
