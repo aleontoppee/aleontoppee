@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sito con Pagine Scorribili</title>
+<title>Sito con Pagine Separate</title>
 <style>
   body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
   }
   .pagina {
-    padding: 50px 20px;
+    height: 100vh; /* Occupa l'intera altezza della finestra del browser */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Colore di sfondo della pagina */
+  }
+  .testo {
     text-align: center;
-  }
-  .pagina h2 {
-    font-size: 24px;
-  }
-  .pagina p {
-    font-size: 18px;
-    line-height: 1.6;
   }
   .navigazione {
     position: fixed;
@@ -30,18 +31,24 @@
 <body>
 
 <div id="pagina1" class="pagina">
-  <h2>Pagina 1</h2>
-  <p>Questo è il contenuto della pagina 1.</p>
+  <div class="testo">
+    <h2>Pagina 1</h2>
+    <p>Questo è il contenuto della pagina 1.</p>
+  </div>
 </div>
 
 <div id="pagina2" class="pagina">
-  <h2>Pagina 2</h2>
-  <p>Questo è il contenuto della pagina 2.</p>
+  <div class="testo">
+    <h2>Pagina 2</h2>
+    <p>Questo è il contenuto della pagina 2.</p>
+  </div>
 </div>
 
 <div id="pagina3" class="pagina">
-  <h2>Pagina 3</h2>
-  <p>Questo è il contenuto della pagina 3.</p>
+  <div class="testo">
+    <h2>Pagina 3</h2>
+    <p>Questo è il contenuto della pagina 3.</p>
+  </div>
 </div>
 
 <div class="navigazione">
@@ -52,5 +59,6 @@
 
 </body>
 </html>
+
 
 
